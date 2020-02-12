@@ -120,7 +120,22 @@
         </a-card>
       </a-col>
     </a-row>
-
+    <a-row :gutter="24">
+      <a-col :sm="24" :md="12" :xl="12" :style="{ marginBottom: '12px' }">
+        <a-card :bordered="false" title="各市辖区销售预约比" :style="{ height: '800px'}">
+          <div>
+            <SaleReservationMap/>
+          </div>
+        </a-card>
+      </a-col>
+      <a-col :sm="24" :md="12" :xl="12" :style="{ marginBottom: '12px' }">
+        <a-card :bordered="false" title="各市辖区销售比例" :style="{ height: '800px'}">
+          <div style="margin-top: 0px">
+            <SaleMap/>
+          </div>
+        </a-card>
+      </a-col>
+    </a-row>
     <a-card title="实时全市统计表" style="margin-bottom: 12px">
       <a-table
         size="small"
@@ -173,7 +188,9 @@
     MiniArea,
     MiniProgress,
     InformationLiquid,
-    ReportBar
+    ReportBar,
+    SaleMap,
+    SaleReservationMap
   } from '@/components'
   import {mixinDevice} from '@/utils/mixin'
   import {getAnalysisList} from '@/api/manage'
@@ -191,6 +208,8 @@
     name: 'Analysis',
     mixins: [mixinDevice],
     components: {
+      SaleMap,
+      SaleReservationMap,
       ChartCard,
       MiniBar,
       MiniProgress,

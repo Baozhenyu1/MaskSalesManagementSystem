@@ -59,8 +59,6 @@
             //console.log("prizeList updated")
 
           }
-          //console.log("prizeList size:" + this.prizeList.length)
-          //console.log("tmpList size:" + this.tmpList.length)
         }, 1500)
 
       },

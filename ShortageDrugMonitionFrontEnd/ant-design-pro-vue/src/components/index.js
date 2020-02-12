@@ -16,6 +16,8 @@ import MiniArea from '@/components/Charts/MiniArea'
 import TestComponent from '@/components/Test/TestComponent'
 import RelationChart from '@/components/Charts/RelationChart'
 import LineChart from '@/components/Charts/LineChart'
+import SaleMap from '@/components/Charts/SaleMap'
+import SaleReservationMap from '@/components/Charts/SaleReservationMap'
 
 
 // pro components
@@ -73,5 +75,7 @@ export {
   ArticleListContent,
   TestComponent,
   RelationChart,
-  descriptionItem
+  descriptionItem,
+  SaleReservationMap,
+  SaleMap
 }

@@ -40,6 +40,11 @@ const api = {
   drugbidList: '/ShortageDrugMonitoring/api-backend/DrugBidList/?format=json',
   drugInfo: '/ShortageDrugMonitoring/api-backend/DrugIndication/?',
   wordCloud: '/ShortageDrugMonitoring/api-backend/wordcnt/',
+
+
+  // 两张地图
+  saleData: '/ShortageDrugMonitoring/api-backend/SaleRatio/',
+  saleReservationData: '/ShortageDrugMonitoring/api-backend/SaleReservationRatio/',
 }
 
 export default api
@@ -330,5 +335,19 @@ export function saveService (parameter) {
     url: api.service,
     method: parameter.id === 0 ? 'post' : 'put',
     data: parameter
+  })
+}
+
+
+export function getSaleData () {
+  return axios({
+    url: api.saleData,
+    method: 'get'
+  })
+}
+export function getSaleReservationData () {
+  return axios({
+    url: api.saleReservationData,
+    method: 'get'
   })
 }

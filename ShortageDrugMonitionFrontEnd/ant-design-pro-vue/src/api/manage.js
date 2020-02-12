@@ -43,7 +43,7 @@ const api = {
 
 
   // 两张地图
-  saleData: '/ShortageDrugMonitoring/api-backend/SaleRatio/',
+  saleData: '/ShortageDrugMonitoring/api-backend/SellTable/',
   saleReservationData: '/ShortageDrugMonitoring/api-backend/SaleReservationRatio/',
 }
 
@@ -342,7 +342,8 @@ export function saveService (parameter) {
 export function getSaleData () {
   return axios({
     url: api.saleData,
-    method: 'get'
+    method: 'get',
+    params:{'map':1}
   })
 }
 export function getSaleReservationData () {
